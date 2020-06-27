@@ -32,9 +32,9 @@ class collector():
 
         # mysql 데이터베이스랑 연동하는 방식.
         # bot: 계정명
-        # 1234!@#$ : 본인 데이터베이스의 비밀번호를 입력
+        # 1234 : 본인 데이터베이스의 비밀번호를 입력
         # localhost : 자신의 PC에 데이터베이스를 구축한 경우 (만약 다른 PC에 데이터베이스를 구축한 경우는 해당 PC의 IP를 기재)
-        # 3306 : mysql 접속 기본 포트 번호 (만약 포트 번호를 변경 하신 분은 그에 맞게 설정 해주셔야 합니다.)
+        # 3303 : mysql 접속 기본 포트 번호 (만약 포트 번호를 변경 하신 분은 그에 맞게 설정 해주셔야 합니다.)
         self.engine_bot = create_engine("mysql+mysqldb://bot:" + "1234" + "@localhost:3303/" + db_name,
                                         encoding='utf-8')
 
