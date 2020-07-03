@@ -615,6 +615,9 @@ class simulator_func_mysql():
                                         'today_buy_reinvest_count5_remain_count'],
                                index=jango_temp['id'])
 
+        print("self.jango: " + self.jango)
+        print("type: " + type(self.jango))
+
     # all_item_db 라는 테이블을 만들기 위한 self.df_all_item 데이터프레임
     def init_df_all_item(self):
         df_all_item_temp = {'id': []}
