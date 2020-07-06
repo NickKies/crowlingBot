@@ -94,7 +94,7 @@ class simulator_func_mysql():
         # 아래 부터는 알고리즘 별로 별도의 설정을 해주는 부분
         if self.simul_num == 1:
             # 시뮬레이팅 시작 일자
-            self.simul_start_date = "20190101"
+            self.simul_start_date = "20200101"
 
             ######### 알고리즘 선택 #############
             # 매수 리스트 설정 알고리즘 번호
@@ -110,7 +110,7 @@ class simulator_func_mysql():
             self.invest_unit = 1000000
 
             # 자산 중 최소로 남겨 둘 금액
-            self.limit_money = 3000000
+            self.limit_money = 0
 
             # 익절 수익률 기준치
             self.sell_point = 10
@@ -125,7 +125,7 @@ class simulator_func_mysql():
 
         elif self.simul_num == 2:
             # 시뮬레이팅 시작 일자
-            self.simul_start_date = "20190101"
+            self.simul_start_date = "20200101"
 
             ######### 알고리즘 선택 #############
             # 매수 리스트 설정 알고리즘 번호
@@ -138,7 +138,7 @@ class simulator_func_mysql():
             # 매수 금액
             self.invest_unit = 1000000
             # 자산 중 최소로 남겨 둘 금액
-            self.limit_money = 1000000
+            self.limit_money = 0
             # # 익절 수익률 기준치
             self.sell_point = False
             # 손절 수익률 기준치
@@ -153,7 +153,7 @@ class simulator_func_mysql():
 
             # 시뮬레이팅 시작 일자
 
-            self.simul_start_date = "20190101"
+            self.simul_start_date = "20200101"
 
             ######### 알고리즘 선택 #############
 
@@ -177,7 +177,7 @@ class simulator_func_mysql():
 
             # 자산 중 최소로 남겨 둘 금액
 
-            self.limit_money = 1000000
+            self.limit_money = 0
 
             # 익절 수익률 기준치
 
