@@ -23,7 +23,7 @@ class collector_api():
     # 업데이트가 금일 제대로 끝났는지 확인
     def variable_setting(self):
         self.open_api.py_gubun = "collector"
-        self.start_date_rows = '20190827'
+        self.start_date_rows = '20190102'
         self.dc = daily_crawler(self.open_api.cf.real_db_name, self.open_api.cf.real_daily_craw_db_name,
                                 self.open_api.cf.real_daily_buy_list_db_name)
         self.dbl = daily_buy_list()
