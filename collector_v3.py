@@ -1,8 +1,8 @@
 # 이 코드가 완벽히 이해가 된다면 봇 개발 절반은 성공.
 
 
-#아래는 코드에서 주석으로 한글을 쓰기 위해서 달아주는 약속. 암기 X 그냥 복사 -> 붙여넣기.
-#-*- coding: utf-8 -*-
+# 아래는 코드에서 주석으로 한글을 쓰기 위해서 달아주는 약속. 암기 X 그냥 복사 -> 붙여넣기.
+# -*- coding: utf-8 -*-
 
 # crtl + alt + 좌우방향키 : 이전 커서 위치로
 
@@ -23,21 +23,25 @@ from library.collector_api import *
 # 위와 같은 방식으로 설치가 안되는 경우는 아래 terminal 탭 클릭 후 -> pip install pymysql
 from sqlalchemy import create_engine
 import pymysql
+
 pymysql.install_as_MySQLdb()
+
 
 class collector():
     print("collector 클래스에 들어왔습니다.")
+
     def __init__(self):
         print("__init__ 함수에 들어왔습니다.")
         # self.api라는 인스턴스 변수를 만든다. Openapi클래스의 인스턴스를 self.api라는 인스턴스 변수에 담는다.
         # Openapi() 클래스를 호출하게 되면 openapi프로그램이 실행 되면서 증권사 계정과 연동이 된다.
 
         # self.collector_api: 데이터를 수집하는 API 클래스에 대한 인스턴스
-        self.collector_api=collector_api()
-        #코스피, 코스닥 종목 출력 테스트
+        self.collector_api = collector_api()
+        # 코스피, 코스닥 종목 출력 테스트
 
     def collecting(self):
         self.collector_api.code_update_check()
+
 
 #  __name__ ? => 현재 모듈의 이름을 담고 있는 내장 변수, 우리는 colector라는 파일을 실행한다! -> 이 파일의 이름은 __main__ 이 된다.
 # import openapi를 통해서 openapi소스코드를 참고를 하는 경우 openapi파일의 __name__은 "openapi"로 찍힌다.
@@ -53,4 +57,3 @@ if __name__ == "__main__":
 
     # 데이터 수집 시작 -> 주식 종목, 종목별 금융 데이터 모두 데이터베이스에 저장.
     c.collecting()
-

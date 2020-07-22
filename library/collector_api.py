@@ -62,11 +62,11 @@ class collector_api():
         if rows[0][3] != self.open_api.today:
             self.db_to_today_profit_list()
 
-        # daily_craw db 업데이트
+        # daily_craw db 업데이트 1번
         if rows[0][7] != self.open_api.today:
             self.daily_crawler_check()
 
-        # daily_buy_list db 업데이트
+        # daily_buy_list db 업데이트 2번
         if rows[0][9] != self.open_api.today:
             self.daily_buy_list_check()
 
@@ -74,7 +74,7 @@ class collector_api():
         if rows[0][6] != self.open_api.today:
             self.realtime_daily_buy_list_check()
 
-        # min_craw db (분별 데이터) 업데이트
+        # min_craw db (분별 데이터) 업데이트 3번 ( 번호 써진 순서 지켜야함 )
         if rows[0][8] != self.open_api.today:
             self.min_crawler_check()
 
